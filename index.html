@@ -1,0 +1,75 @@
+<!-- Painel Pessoal – Organização Diária -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Faz o site se adaptar a telas menores (celular, tablet) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Painel Pessoal </title>
+    
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script> 
+   
+    <!-- Mensagem exibida se o JavaScript estiver desativado -->
+    <noscript> 
+         Você precisa ativar o JavaScript para visualizar este site corretamente. 
+    </noscript>
+</head>
+
+<body class="tema-escuro">
+    
+    <!-- Cabeçalho do site --> 
+    <header class="container">
+        <h1> Painel Pessoal </h1>
+
+
+        <!--Botão de troca de tema -->
+        <button class="botao-tema">Claro</button>
+    </header>   
+        
+    <!-- Conteúdo principal-->
+    <main class="container">
+
+        <section class="secao-tarefas">
+            <p class="descricao"> prioridades do dia: </p>
+            <ul class="tarefas-container"></ul>
+        </section>
+
+        <section class="secao-gastos">
+            <h2> Controle de Gastos </h2>
+
+            <p class="descricao"><strong>
+                Registre pequenos gastos do dia a dia
+            </strong></p>
+
+            <!--campo de entrada -->
+            <input 
+                type="number"
+                class="input-gasto"
+                placeholder="Digite o valor do gasto"
+            >
+            <!--Botão para adicionar o gasto -->
+            <button class="botao-gasto">
+                Adicionar Gasto
+            </button>
+
+            <div class="resultado-gastos">
+                <p> Total: R$  0</p>
+                <p> Quantidade:  0</p>
+                <p> Média: R$  0</p>
+            </div>
+            
+        </section>
+
+        <section class="secao-estudo">
+            <h2> Estudos  </h2>
+            <div class="estudos-container"></div> 
+        </section>
+
+    </main>    
+
+</body>
+</html>

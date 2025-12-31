@@ -1,0 +1,220 @@
+
+:root {
+    /* Variáveis globais de cores */
+    --verde-claro: #a8f3a8;
+    --branco: #ffffff;
+    --preto: #454043; 
+
+}
+
+* {
+    /* Aplica a todos os elementos */
+    color: var(--cor-texto);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+body {
+    /* Fundo da página usa variável de tema */ 
+    background-color:  var(--cor-fundo);
+    margin: 0;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    /* Espaçamento interno do conteúdo */
+    padding: 40px;
+    
+}
+
+.lista-tarefas {
+    /* Fonte específica da lista */
+    font-family: Helvetica;
+}
+
+.lista-tarefas li {
+    /* Estilo padrão dos itens */
+    list-style: circle;
+    
+}
+
+
+.lista-tarefas li.quadrado  {
+    
+     /* Itens destacados usam marcador quadrado */
+     list-style: square;
+}
+
+.tema-claro {
+    --cor-fundo: var(--verde-claro);
+    --cor-texto: var(--preto);
+    --cor-botao: var(--preto);
+    --cor-texto-botao: var(--branco);
+}
+
+.tema-escuro {
+    --cor-fundo: var(--preto);
+    --cor-texto: var(--verde-claro);
+    --cor-botao: var(--branco);
+    --cor-texto-botao: var(--preto);
+}
+
+.botao-tema {
+    /* Posição do botão */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    /* tamanho */
+    width: 60px;
+    height: 60px;
+
+    /* forma circular */
+    border-radius: 50%;
+    border: none;
+
+    /* cores baseadas no tema */
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
+
+    cursor: pointer;
+
+}
+
+.botao-tema:focus {
+    /* Remove a borda azul padrão ao clicar */
+    outline: none;
+}
+
+
+.concluida {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+/* seção de controle de gastos */
+
+
+.secao-gastos {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cor-texto);
+}
+
+.secao-gastos h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.secao-gastos .descricao {
+    margin-bottom: 15px;
+    
+}
+
+.input-gasto {
+    width: 150px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color:transparent;
+    color: var(--cor-texto);
+}
+
+.secao-gastos .botao-gasto {
+    border-radius: 10px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
+} 
+
+.resultado-gastos {
+    margin-top: 20px;
+    
+    
+}
+
+/* Secção de Estudos */
+
+
+.secao-estudo {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255, 0.03);
+}
+
+.secao-estudo h2 {
+    text-align: center;
+    position: relative; /* Permite mover o elemento */
+    top: -25px; /* sobe o título */
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    
+}
+
+.estudos-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.estudo-item {
+    padding: 16px;
+    border-radius: 30px;
+    min-width: 200px;
+    background-color: rgb(255, 255, 255, 0.05);
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.estudo-nome {
+    font-weight: 700;
+    font-size: 14px;
+   
+}
+
+.estudo-status {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+    .estudo-item {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.estudo-status.em-andamento {
+    background-color: rgba(235, 255, 18, 0.999);
+    color: #14170e;
+}
+
+
+
+.estudo-status.concluido {
+    background-color: rgb(37, 239, 6);
+    color: #060505;
+}
+
+.estudo-status.pausado {
+    background-color: white;
+    color: #060505;
+}
+
+
+.estudo-status.nao-iniciado {
+    background-color: rgba(255, 0, 0, 0.25);
+    color: #060505;
+}
